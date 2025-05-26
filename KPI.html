@@ -8,78 +8,41 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: "Segoe UI", sans-serif;
+      width: 100%;
+      overflow: hidden; /* Evita barras de rolagem */
     }
-
-    .topbar {
-      background-color: #742774; /* Roxo Power Apps */
-      color: white;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      height: 47px; /* Altura corrigida para 1,25 cm */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .topbar .brand {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .topbar .spacer {
-      flex: 1;
-    }
-
-    .topbar .right {
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
     .container {
       display: flex;
-      height: calc(100vh - 47px); /* Ajuste conforme a nova altura */
+      height: 100vh;
       width: 100vw;
+      overflow: hidden;
     }
-
+    .left, .right {
+      height: 100%;
+      overflow: hidden;
+    }
     .left {
       width: 50%;
-      height: 100%;
     }
-
     .right {
       width: 50%;
-      height: 100%;
       display: flex;
       flex-direction: column;
     }
-
     .top-right, .bottom-right {
       height: 50%;
       width: 100%;
+      overflow: hidden;
     }
-
-    iframe {
+    iframe, img {
       width: 100%;
       height: 100%;
       border: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      display: block;
     }
   </style>
 </head>
 <body>
-
-  <!-- Barra superior -->
-  <div class="topbar">
-    <div class="brand">Layout MDO</div>
-    <div class="spacer"></div>
-  </div>
-
-  <!-- Conteúdo principal -->
   <div class="container">
     <div class="left">
       <iframe 
@@ -97,6 +60,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
